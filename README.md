@@ -42,4 +42,4 @@ Vantagem:
 yarn add axios
 
 
-
+![/screenshots/tela_inicial.png](/screenshots/tela_inicial.png)
