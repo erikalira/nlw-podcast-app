@@ -38,5 +38,8 @@ Vantagem:
 - mesmo se muitos usuarios acessarem o servidor, não tera sobrecarga de requisições
 - escolher de quanto em quanto tempo o servidor é atualizado
 
+## instalar axios
+yarn add axios
+
 
 
