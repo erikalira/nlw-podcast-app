@@ -1,6 +1,7 @@
 // import { useEffect } from "react"
 import { GetStaticProps } from "next"
 import Image from 'next/image'
+import Link from 'next/link'
 import { api } from '../services/api'
 
 import { format, parseISO } from 'date-fns'
@@ -12,15 +13,14 @@ import { convertDurationToString } from "../utils/convertDurationToTimeString"
 import styles from './home.module.scss'
 
 type Episode = {
-  id: string
-  title: string
+  id: string;
+  title: string;
   thumbnail: string;
   members: string;
-  publishedAt: string
-  duration: number
-  durationAsString: string
-  description: string
-  url: string
+  publishedAt: string;
+  duration: number;
+  durationAsString: string;
+  url: string;
 }
 
 type HomeProps = {
@@ -48,10 +48,12 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                 />
 
                 <div className={styles.episodeDetails}>
-                <a href=''>{episode.title}</a>
-                <p>{episode.members}</p>
-                <span>{episode.publishedAt}</span>
-                <span>{episode.durationAsString}</span>
+                  <Link href={`/episodes/${episode.id}`}>
+                    <a>{episode.title}</a>
+                  </Link>
+                  <p>{episode.members}</p>
+                  <span>{episode.publishedAt}</span>
+                  <span>{episode.durationAsString}</span>
                 </div>
 
                 <button type='button'>
@@ -68,12 +70,14 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 
         <table cellSpacing={0}>
           <thead>
-            <th></th>
-            <th>Podcast</th>
-            <th>Integrantes</th>
-            <th>Data</th>
-            <th>Duração</th>
-            <th></th>
+            <tr>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
             {allEpisodes.map(episode => {
@@ -89,7 +93,9 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                     />
                   </td>
                   <td>
-                    <a href=''>{episode.title}</a>
+                    <Link href={`/episodes/${episode.id}`}>
+                      <a href=''>{episode.title}</a>
+                    </Link>
                   </td>
                   <td>{episode.members}</td>
                   <td style={{ width: 100 }}>{episode.publishedAt}</td>

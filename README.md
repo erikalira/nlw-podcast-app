@@ -42,4 +42,5 @@ Vantagem:
 yarn add axios
 
 
+## screenshot do resultado parcial
 ![/screenshots/tela_inicial.png](/screenshots/tela_inicial.png)
