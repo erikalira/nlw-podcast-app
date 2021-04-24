@@ -13,6 +13,7 @@ type PlayerContextData = {
     currentEpisodeIndex: number;
     isPlaying: boolean;
     play: (Episode: Episode) => void;
+    togglePlay: () => void;
 }
 
 export const PlayerContext = createContext({} as PlayerContextData)
