@@ -1,5 +1,7 @@
 # Podcast
 
+![/screenshots/tela_inicial.png](/screenshots/tela_inicial.png)
+
 ## criar a aplicação React com next.js
 yarn create-next-app App Name
 
@@ -40,7 +42,3 @@ Vantagem:
 
 ## instalar axios
 yarn add axios
-
-
-## screenshot do resultado parcial
-![/screenshots/tela_inicial.png](/screenshots/tela_inicial.png)

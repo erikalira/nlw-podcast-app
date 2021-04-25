@@ -1,6 +1,7 @@
 // import { useEffect } from "react"
 import { GetStaticProps } from "next"
 import Image from 'next/image'
+import Head from 'next/head'
 import Link from 'next/link'
 import { api } from '../services/api'
 
@@ -37,6 +38,10 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 
   return (
     <div className={styles.homepage}>
+
+      <Head>
+        <title>Home</title>
+      </Head>
       <section className={styles.latestEpisodes}>
         <h2>Ultimos lançamentos</h2>
 

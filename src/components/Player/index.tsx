@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useContext, useRef, useEffect, useState } from 'react';
 import { PlayerContext, usePlayer } from '../../contexts/PlayerContext';
-import Slider from 'rc-slider'
+import Slider, { Handle } from 'rc-slider'
 import styles from './styles.module.scss'
 import 'rc-slider/assets/index.css'
 import { convertDurationToString } from '../../utils/convertDurationToTimeString';
@@ -23,7 +23,8 @@ export function Player() {
         playNext,
         playPrevious,
         hasNext,
-        hasPrevious
+        hasPrevious,
+        clearPlayerState
     } = usePlayer()
 
     useEffect(() => {
@@ -44,6 +45,19 @@ export function Player() {
         audioRef.current.addEventListener('timeupdate', () => {
             setProgress(Math.floor(audioRef.current.currentTime))
         })
+    }
+
+    function handleSeek(amount: number) {
+        audioRef.current.currentTime = amount
+        setProgress(amount)
+    }
+
+    function handleEpisodeEnded () {
+        if (hasNext) {
+            playNext()
+        } else {
+            clearPlayerState()
+        }
     }
 
     const episode = episodeList[currentEpisodeIndex]
@@ -78,7 +92,10 @@ export function Player() {
                 <span>{convertDurationToString(progress)}</span>
                     <div className={styles.slider}>
                         { episode ? (
-                            <Slider 
+                            <Slider
+                            max={episode.duration}
+                            value={progress}
+                            onChange={handleSeek}
                             trackStyle={{ backgroundColor: '#04d361' }}
                             railStyle={{ backgroundColor: '#9f75ff'}}
                             handleStyle={{ borderColor: '#04d361', borderWidth: 4}}
@@ -95,6 +112,7 @@ export function Player() {
                         src={episode.url}
                         ref={audioRef}
                         autoPlay
+                        onEnded={handleEpisodeEnded}
                         loop={isLooping}
                         onPlay={() => setPlayingState(true)}
                         onPause={() => setPlayingState(false)}
