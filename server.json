@@ -8,7 +8,7 @@
       "thumbnail": "https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/opensource.jpg",
       "description": "<p>Nesse episódio do Faladev, Diego Fernandes se reúne com João Pedro Schmitz, Bruno Lemos e Diego Haz, para discutir sobre a importância da contribuição open source e quais desafios circulam na comunidade.</p><p>A gente passa a maior parte do tempo escrevendo código. Agora chegou o momento de falar sobre isso. Toda semana reunimos profissionais da tecnologia para discutir sobre tudo que circula na órbita da programação.</p><p>O Faladev é um podcast original Rocketseat.</p>",
       "file": {
-        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0d7792d3-2815-4b47-a463-d3555f04eadb/Voz_001.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210423%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210423T010315Z&X-Amz-Expires=86400&X-Amz-Signature=fbd5c1f2d841d0ce67e6dcbcafd1d6807776fea8842710880f9b408a0741aeff&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Voz%2520001.mp3%22",
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0d7792d3-2815-4b47-a463-d3555f04eadb/Voz_001.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210424%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210424T225558Z&X-Amz-Expires=86400&X-Amz-Signature=f9260c9aff42df7f63b464a570700c32a9929c1eec45500612dfd20d1c41c6cb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Voz%2520001.mp3%22",
         "type": "audio/x-m4a",
         "duration": 3981
       }
